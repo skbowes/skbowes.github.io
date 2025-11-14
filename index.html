@@ -10,6 +10,17 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Hide captions for specific gallery items */
+			.no-captions .poptrox-caption,
+			.no-captions .poptrox-popup .caption,
+			.no-captions .poptrox-popup .title,
+			.no-captions .poptrox-nav-caption,
+			.poptrox-popup .caption,
+			.poptrox-popup .title {
+				display: none !important;
+			}
+		</style>
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 	</head>
 	<body class="is-preload">
@@ -19,7 +30,8 @@
 				<div class="inner">
 					<a href="#" class="image avatar"><img src="images/IMG_5779.jpg" alt="" /></a>
 					<h1><strong>Contact me:</strong> <br />
-					<a href="mailto:s.bowes@mail.utoronto.ca">s.bowes@mail.utoronto.ca</a><br />
+					<!-- <a href="mailto:s.bowes@mail.utoronto.ca">s.bowes@mail.utoronto.ca</a><br /> -->
+					 <a href="mailto:s&#46;bowes&#64;mail&#46;utoronto&#46;ca">s&#46;bowes&#64;mail&#46;utoronto&#46;ca</a><br />
 					<!-- crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1> -->
 				</div>
 			</header>
@@ -41,15 +53,16 @@
 
 				<!-- Two -->
 					<section id="two">
-						<h2>Recent Work</h2>
+						<h2>Previous Work</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<!-- <a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a> -->
+								<a href="images/dustysim.png" class="image fit thumb" title="Lightcurve of λ Scorpii"><img src="images/dustysim.png" alt="" /></a>
 								<h3>Temperature in Massive Star Formation</h3>
 								<p>Investigating how temperature plays a role in massive star formation, particularly in sites with overabundances of massive stars, such as protoclusters.</p>
 							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<!-- <a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a> -->
+							<article class="col-6 col-12-xsmall work-item no-captions">
+								<a href="images/foldedbinned_sec12.png" class="image fit thumb" title=""><img src="images/foldedbinned_sec12.png" alt="Lightcurve of λ Scorpii" /></a>
+								<a href="images/colourmesh_cropped.png" class="image fit thumb" title=""><img src="images/colourmesh_cropped.png" alt="Asteroseismic modeling" /></a>	
 								<h3>Asteroseismology of Eclipsing Binaries</h3>
 								<p>I worked on modelling both the pulsations and the eclipses of binary system λ Scorpii to shed light on physical parameters of the stars, with an emphasis on convective core overshoot.</p>
 							</article>
@@ -85,11 +98,179 @@
 					</section>
 
 						<section id="four">
-						<!-- <h2>CV</h2> -->
-						<p>Click <a href="Shannon_Bowes_CV.pdf">here</a> to see my CV.</p>
-						<!-- <p>Bowes & Martin, “Diagnostics from polarization of scattered optical light from Galactic infrared cirrus”, 2023, ApJ, 959, 40.</p> -->
-						</div>
+						<h2>CV</h2>
+						<p>Click <a href="Shannon_Bowes_CV.pdf">here</a> to see my CV (as of Nov. 2025).</p>
+						<!-- <p>Bowes & Martin, "Diagnostics from polarization of scattered optical light from Galactic infrared cirrus", 2023, ApJ, 959, 40.</p> -->
 						</section>
+
+					<!-- Extras Section -->
+					<section id="extras">
+						<h2>Extras</h2>
+							<div class="carousel-container">
+								<div class="carousel">
+									<div class="carousel-slide active">
+										<img src="images/IMG_M51.PNG" alt="M51" />
+										<p>M51, taken at MtA Gemini Observatory</p>
+									</div>
+									<div class="carousel-slide">
+										<img src="images/IMG_M42.jpg" alt="M42" />
+										<p>M42, taken with SeeStar S50</p>
+									</div>
+									<div class="carousel-slide">
+										<img src="images/IMG_M13.jpg" alt="M13" />
+										<p>M13, taken with SeeStar S50</p>
+									</div>
+									<div class="carousel-slide">
+										<img src="images/IMG_M81.jpg" alt="M81" />
+										<p>M81, taken with SeeStar S50</p>
+									</div>
+									</div>
+									<div class="carousel-slide">
+										<img src="images/IMG_moon.jpg" alt="Moon" />
+										<p>Moon, taken with SeeStar S50</p>
+									</div>	
+									<div class="carousel-slide">
+										<img src="images/IMG_8154.jpg" alt="Gemini" />
+										<p>Running a 2024 eclipse viewing party</p>
+									</div>	
+								</div>
+								
+								<!-- Navigation arrows -->
+								<button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+								<button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+								
+								<!-- Dots indicator -->
+								<div class="carousel-dots">
+									<span class="dot active" onclick="currentSlide(1)"></span>
+									<span class="dot" onclick="currentSlide(2)"></span>
+									<span class="dot" onclick="currentSlide(3)"></span>
+									<span class="dot" onclick="currentSlide(4)"></span>
+									<span class="dot" onclick="currentSlide(5)"></span>
+									<span class="dot" onclick="currentSlide(6)"></span>
+								</div>
+							</div>
+					</section>
+
+					<style>
+					.carousel-container {
+						position: relative;
+						width: 100%;
+						margin: 0 0 2em 0;
+						background: #fff;
+						border-radius: 0.35em;
+						overflow: hidden;
+						box-shadow: 0 0 0 1px rgba(144, 144, 144, 0.25);
+					}
+
+					.carousel-slide {
+						display: none;
+						text-align: center;
+						padding: 1.5em;
+					}
+
+					.carousel-slide.active {
+						display: block;
+					}
+
+					.carousel-slide img {
+						width: 100%;
+						height: auto;
+						border-radius: 0.35em;
+					}
+
+					.carousel-slide p {
+						margin: 1em 0 0 0;
+						color: #666;
+						font-style: italic;
+					}
+
+					.carousel-btn {
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						background: rgba(39, 43, 67, 0.8);
+						color: white;
+						border: none;
+						padding: 12px 16px;
+						font-size: 16px;
+						cursor: pointer;
+						user-select: none;
+						transition: background-color 0.3s;
+						z-index: 10;
+					}
+
+					.carousel-btn:hover {
+						background: rgba(39, 43, 67, 1);
+					}
+
+					.carousel-btn.prev {
+						left: 10px;
+						border-radius: 0 4px 4px 0;
+					}
+
+					.carousel-btn.next {
+						right: 10px;
+						border-radius: 4px 0 0 4px;
+					}
+
+					.carousel-dots {
+						text-align: center;
+						padding: 1em 0 0.5em 0;
+						background: #fff;
+					}
+
+					.dot {
+						cursor: pointer;
+						height: 12px;
+						width: 12px;
+						margin: 0 4px;
+						background-color: #ccc;
+						border-radius: 50%;
+						display: inline-block;
+						transition: background-color 0.3s ease;
+					}
+
+					.dot.active, .dot:hover {
+						background-color: #49bf9d;
+					}
+					</style>
+
+					<script>
+					let slideIndex = 1;
+
+					function changeSlide(n) {
+						showSlide(slideIndex += n);
+					}
+
+					function currentSlide(n) {
+						showSlide(slideIndex = n);
+					}
+
+					function showSlide(n) {
+						let slides = document.getElementsByClassName("carousel-slide");
+						let dots = document.getElementsByClassName("dot");
+						
+						if (n > slides.length) {slideIndex = 1}
+						if (n < 1) {slideIndex = slides.length}
+						
+						for (let i = 0; i < slides.length; i++) {
+							slides[i].classList.remove("active");
+						}
+						
+						for (let i = 0; i < dots.length; i++) {
+							dots[i].classList.remove("active");
+						}
+						
+						slides[slideIndex - 1].classList.add("active");
+						dots[slideIndex - 1].classList.add("active");
+					}
+
+					// Optional: Auto-rotate every 5 seconds
+					setInterval(() => {
+						changeSlide(1);
+					}, 5000);
+					</script>
+											
 
 				<!-- Four -->
 					<!-- <section id="four">
